@@ -1,2 +1,3 @@
 ## 1. Project
-![MarineGEO circle logo](/image/1.project.png)
+
+<img src="image/1.project.png" alt="drawing" style="height:400px;"/>
