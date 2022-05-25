@@ -123,7 +123,7 @@ body {
                     input{
                         display: none;
                         &:checked + .text {
-                            background-color: #303236;
+                            background-color: #303236,0.6;
                             color: #2CCDEA;
                         }
                     }
