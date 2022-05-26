@@ -34,13 +34,14 @@
         align-items: center;
         flex-direction: column;
         p {
-            margin-top: 60px;
+            margin-top: 80px;
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 100px;
         }
         .orta-kisim {
             display: flex;
+            margin-bottom: 50px;
             .first {
                 width: 405px;
                 height: 164px;
@@ -52,6 +53,24 @@
                 padding: 40px;
                 border-radius: 15px;
                 border: 2px solid #D9D2FF;
+                position: relative;
+                overflow: hidden;
+                .sell {
+                    width: 276px;
+                    height: 54px;
+                    background-color: #9665FF;
+                    position: absolute;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    transform: rotate(45deg);
+                    margin-left: 170px;
+                    margin-bottom: 60px;
+                    position: absolute;
+                }
                 h6 {
                     margin-bottom: 25px;
                     font-size: 20px;
@@ -71,6 +90,10 @@
                         border-radius: 50%;
                         background-color: #fff;
                         margin-right: 10px;
+                        cursor: pointer;
+                        img {
+                            opacity: 0;
+                        }
                     }
                     h1 {
                         font-size: 36px;
@@ -115,6 +138,10 @@
                         border-radius: 50%;
                         background-color: #fff;
                         margin-right: 10px;
+                        cursor: pointer;
+                        img {
+                            opacity: 0;
+                        }
                     }
                     h1 {
                         font-size: 36px;
@@ -127,6 +154,25 @@
                         margin-top: 10px;
                         color: #000;
                     }
+                }
+            }
+        }
+        .buton {
+            button {
+                width: 375px;
+                height: 105px;
+                background-color: #fff;
+                border: 2px solid #FFAF65;
+                border-radius: 10px;
+                font-size: 22px;
+                color: #F07300;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                cursor: pointer;
+                img {
+                    margin-left: 30px;
                 }
             }
         }

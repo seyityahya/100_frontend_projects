@@ -52,7 +52,7 @@
 }
 
 .all .container p {
-  margin-top: 60px;
+  margin-top: 80px;
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 100px;
@@ -62,6 +62,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
 }
 
 .all .container .orta-kisim .first {
@@ -82,6 +83,32 @@
   padding: 40px;
   border-radius: 15px;
   border: 2px solid #D9D2FF;
+  position: relative;
+  overflow: hidden;
+}
+
+.all .container .orta-kisim .first .sell {
+  width: 276px;
+  height: 54px;
+  background-color: #9665FF;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-left: 170px;
+  margin-bottom: 60px;
+  position: absolute;
 }
 
 .all .container .orta-kisim .first h6 {
@@ -116,6 +143,11 @@
   border-radius: 50%;
   background-color: #fff;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.all .container .orta-kisim .first .button button img {
+  opacity: 0;
 }
 
 .all .container .orta-kisim .first .button h1 {
@@ -183,6 +215,11 @@
   border-radius: 50%;
   background-color: #fff;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.all .container .orta-kisim .second .button button img {
+  opacity: 0;
 }
 
 .all .container .orta-kisim .second .button h1 {
@@ -196,5 +233,30 @@
   font-weight: 600;
   margin-top: 10px;
   color: #000;
+}
+
+.all .container .buton button {
+  width: 375px;
+  height: 105px;
+  background-color: #fff;
+  border: 2px solid #FFAF65;
+  border-radius: 10px;
+  font-size: 22px;
+  color: #F07300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.all .container .buton button img {
+  margin-left: 30px;
 }
 /*# sourceMappingURL=main.css.map */
