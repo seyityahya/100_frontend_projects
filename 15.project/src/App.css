@@ -23,3 +23,22 @@ li {
 .user-list li:hover {
   color: darkgrey;
 }
+
+span {
+  font-weight: 300;
+}
+
+ul,
+li,
+h4 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+ul,
+li,
+h5 {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
