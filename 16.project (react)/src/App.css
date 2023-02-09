@@ -1,0 +1,12 @@
+.menu {
+  display: flex;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 0;
+  column-gap: 10px;
+}
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style: none;
+}
