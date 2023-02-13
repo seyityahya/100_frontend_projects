@@ -2,31 +2,35 @@ import React from 'react'
 import { useFormik } from 'formik';
 
 function Contact() {
-  const formik = useFormik({
+  const {handleSubmit, handleChange, isSubmitting} = useFormik({
     initialValues:{
-      firstName: '',
-      lastName: '',
-      email: '',
-      message: '',
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
     },
-    onSubmit:(values) => {
+    onSubmit: async (values, bag) => {
+      await new Promise((r) => setTimeout(r, 1000));
       console.log(values);
-    }
-  })
+
+      bag.resetForm();
+    },
+  });
 
 
   return (
     <div>
         <h2>İletişim</h2>
 
-        <form onSubmit={formik.handleSubmit} className='form'>
+        <form onSubmit={handleSubmit} className='form'>
         <div>
           <label htmlFor="firstName">First Name</label>
           <input 
             id="firstName" 
             name="firstName" 
             placeholder="Jane" 
-            onChange={formik.handleChange("firstName")}
+            disabled={isSubmitting}
+            onChange={handleChange("firstName")}
           />
         </div>
 
@@ -35,8 +39,9 @@ function Contact() {
           <input 
             id="lastName" 
             name="lastName" 
-            placeholder="Doe" 
-            onChange={formik.handleChange("lastName")} 
+            placeholder="Doe"
+            disabled={isSubmitting}
+            onChange={handleChange("lastName")} 
           />
         </div>
 
@@ -47,7 +52,8 @@ function Contact() {
             name="email"
             placeholder="jane@acme.com"
             type="email"
-            onChange={formik.handleChange("email")}
+            disabled={isSubmitting}
+            onChange={handleChange("email")}
           />
         </div>
 
@@ -57,11 +63,12 @@ function Contact() {
             id="message"
             name="message"
             placeholder="Your Message..."
-            onChange={formik.handleChange("message")}
+            disabled={isSubmitting}
+            onChange={handleChange("message")}
           />
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={isSubmitting}>Submit</button>
       </form>
     </div>
   )
