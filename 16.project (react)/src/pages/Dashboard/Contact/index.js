@@ -84,7 +84,7 @@ function Contact() {
           {errors.message&& touched.message && <div className='error'>{errors.message}</div>}
         </div>
 
-        <button type="submit" disabled={isSubmitting}>Submit</button>
+        <button type="submit" disabled={isSubmitting}>submit</button>
       </form>
     </div>
   )
