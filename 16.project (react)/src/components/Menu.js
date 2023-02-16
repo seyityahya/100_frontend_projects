@@ -6,13 +6,13 @@ function Menu() {
     <div>
         <ul className='menu'>
             <li>
-                <Link to="/">AnaSayfa</Link>
+                <Link to="/" className='header-link'>ANASAYFA</Link>
             </li>
             <li>
-                <Link to="users">Kullanıcılar</Link>
+                <Link to="users" className='header-link'>KULLANICILAR</Link>
             </li>
             <li>
-                <Link to="contact">İletişim</Link>
+                <Link to="contact" className='header-link'>İLETİŞİM</Link>
             </li>
         </ul>
     </div>

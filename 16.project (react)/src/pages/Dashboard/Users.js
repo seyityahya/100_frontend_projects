@@ -11,13 +11,13 @@ function Users() {
   }, []);
 
   return (
-    <div>
+    <div className='user'>
       <h2>Kullanıcılar</h2>
 
       <ul>
         {users.map((user) => (
           <li key={user.id}>
-            <Link to={`${user.id}`} state={user}>{user.name}</Link>
+            <Link to={`${user.id}`} state={user} className='link'>{user.name}</Link>
           </li>
         ))}
       </ul>

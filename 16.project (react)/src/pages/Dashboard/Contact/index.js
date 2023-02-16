@@ -23,7 +23,7 @@ function Contact() {
 
 
   return (
-    <div>
+    <div className='iletişim'>
         <h2>İletişim</h2>
 
         <form onSubmit={handleSubmit} className='form'>

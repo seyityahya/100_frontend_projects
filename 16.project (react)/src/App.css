@@ -1,14 +1,41 @@
 .menu {
   display: flex;
   border-bottom: solid 1px #ccc;
-  padding: 10px 0;
-  column-gap: 10px;
+  padding: 10px 30px;
+  column-gap: 20px;
+}
+ul {
+  margin: 0;
 }
 ul,li {
   margin: 0;
   padding: 0;
   list-style-type: none;
   list-style: none;
+}
+ul,li,h4 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+ul,li,h5 {
+  margin: 0;
+  margin-left: 15px;
+}
+ul,li,span {
+  font-weight: 400;
+}
+
+
+.header-link {
+  text-decoration: none;
+  font-weight:bold;
+  font-size: large;
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+  color: darkslategray;
 }
 
 .form > div {
@@ -21,4 +48,16 @@ ul,li {
 
 .form > div > input,textarea {
   padding: 8px;
+}
+
+.user {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.user-detail {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.user-detail,link {
+  margin-top: 50px;
 }
