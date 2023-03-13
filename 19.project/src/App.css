@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: #211f25;
+  transition: width 0.4s;
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.subnav {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.4s;
+}
+.subnav-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.subnav button {
+  padding-left: 64px;
+}
+.subnav button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: 0 -50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255 /40%);
+}
