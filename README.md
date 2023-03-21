@@ -103,9 +103,3 @@
 ## 18. Project
 
 <img src="image/18.project.jpg" alt="drawing" style="height:400px;"/>
-
----
-
-## 20. Project
-
-<img src="image/20.project.jpg" alt="drawing" style="height:400px;"/>
