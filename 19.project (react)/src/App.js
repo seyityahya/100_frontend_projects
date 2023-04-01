@@ -31,8 +31,21 @@ function App() {
   return (
     <div className="p-4">
       <Table
-        head={["Ad Soyad", "E-posta", "Yaş"]}
-        body={users.map((user) => [user.name, user.email, user.age])}
+        searchable={true}
+        head={["Ad Soyad", "E-posta", "Yaş", "İşlemler"]}
+        body={users.map((user) => [
+          user.name,
+          user.email,
+          user.age,
+          [
+            <button className="h-8 px-4 flex items-center rounded bg-blue-600 text-white">
+              Düzenle
+            </button>,
+            <button className="h-8 px-4 flex items-center rounded bg-red-600 text-white">
+              Sil
+            </button>,
+          ],
+        ])}
       />
     </div>
   );
