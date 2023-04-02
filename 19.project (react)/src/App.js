@@ -32,7 +32,12 @@ function App() {
     <div className="p-4">
       <Table
         searchable={true}
-        head={["Ad Soyad", "E-posta", "Yaş", "İşlemler"]}
+        head={[
+          { name: "Ad Soyad", sortable: true },
+          { name: "E-posta" },
+          { name: "Yaş", sortable: true },
+          { name: "İşlemler", width: 300 },
+        ]}
         body={users.map((user) => [
           user.name,
           user.email,
