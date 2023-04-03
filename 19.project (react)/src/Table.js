@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { FaSortDown, FaSortUp, FaSort } from "react-icons/fa";
+import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
+import TableMobile from "./TableMobile";
 
 function Table({ head, body, searchable }) {
+  const isMobile = useMediaQuery("only screen and (max-width: 600px)");
+
   const [sorting, setSorting] = useState(false);
   const [search, setSearch] = useState("");
   const filteredData = body
     .filter((items) =>
       items.some((item) =>
-        item
+        (item?.key || item)
           .toString()
           .toLocaleLowerCase("TR")
           .includes(search.toLocaleLowerCase("TR"))
@@ -43,66 +47,72 @@ function Table({ head, body, searchable }) {
           )}
         </div>
       )}
-      <div className="w-full border rounded p-4">
-        <table className="w-full">
-          <thead>
-            <tr>
-              {head.map((h, key) => (
-                <th
-                  width={h?.width}
-                  className="text-left bg-gray-50 text-sm font-semibold text-gray-500 p-3 border-b"
-                  key={key}
-                >
-                  <div className="inline-flex items-center gap-x-2">
-                    {h.name}
-                    {h.sortable && (
-                      <button
-                        onClick={() => {
-                          if (sorting?.key == key) {
-                            setSorting({
-                              key,
-                              orderBy:
-                                sorting.orderBy == "asc" ? "desc" : "asc",
-                            });
-                          } else {
-                            setSorting({
-                              key,
-                              orderBy: "asc",
-                            });
-                          }
-                        }}
-                      >
-                        {sorting?.key == key &&
-                          (sorting.orderBy == "asc" ? (
-                            <FaSortDown size={14} />
-                          ) : (
-                            <FaSortUp size={14} />
-                          ))}
-                        {sorting?.key != key && <FaSort size={14} />}
-                      </button>
-                    )}
-                  </div>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((items, key) => (
-              <tr className="group" key={key}>
-                {items.map((item, key) => (
-                  <td className="p-3 text-sm group-hover:bg-gray-100" key={key}>
-                    {Array.isArray(item) ? (
-                      <div className="flex gap-x-2.5">{item}</div>
-                    ) : (
-                      item
-                    )}
-                  </td>
+      {isMobile && <TableMobile head={head} body={filteredData} />}
+      {!isMobile && (
+        <div className="w-full border rounded p-4">
+          <table className="w-full">
+            <thead>
+              <tr>
+                {head.map((h, key) => (
+                  <th
+                    width={h?.width}
+                    className="text-left bg-gray-50 text-sm font-semibold text-gray-500 p-3 border-b"
+                    key={key}
+                  >
+                    <div className="inline-flex items-center gap-x-2">
+                      {h.name}
+                      {h.sortable && (
+                        <button
+                          onClick={() => {
+                            if (sorting?.key == key) {
+                              setSorting({
+                                key,
+                                orderBy:
+                                  sorting.orderBy == "asc" ? "desc" : "asc",
+                              });
+                            } else {
+                              setSorting({
+                                key,
+                                orderBy: "asc",
+                              });
+                            }
+                          }}
+                        >
+                          {sorting?.key == key &&
+                            (sorting.orderBy == "asc" ? (
+                              <FaSortDown size={14} />
+                            ) : (
+                              <FaSortUp size={14} />
+                            ))}
+                          {sorting?.key != key && <FaSort size={14} />}
+                        </button>
+                      )}
+                    </div>
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {filteredData.map((items, key) => (
+                <tr className="group" key={key}>
+                  {items.map((item, key) => (
+                    <td
+                      className="p-3 text-sm group-hover:bg-gray-100"
+                      key={key}
+                    >
+                      {Array.isArray(item) ? (
+                        <div className="flex gap-x-2.5">{item}</div>
+                      ) : (
+                        item
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </>
   );
 }

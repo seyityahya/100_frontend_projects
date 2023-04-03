@@ -39,9 +39,11 @@ function App() {
           { name: "İşlemler", width: 300 },
         ]}
         body={users.map((user) => [
-          user.name,
+          <div key={`${user.name} ${user.surname}`}>
+            {user.name} {user.surname}
+          </div>,
           user.email,
-          user.age,
+          <div key={`Yaş ${user.age}`}>{user.age}</div>,
           [
             <button className="h-8 px-4 flex items-center rounded bg-blue-600 text-white">
               Düzenle
