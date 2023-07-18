@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+}
+
+.container nav {
+  width: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 0 30px;
+  height: 100px;
+  background-color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px dashed #ffffff33;
+}
+
+.container nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.container nav .navbar .left {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+
+.container nav .navbar .left a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.container nav .navbar .right {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container nav .navbar .right span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container nav .navbar .right span a {
+  border-left: 1px dashed #ffffff33;
+  height: 100px;
+  width: 60px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0em;
+  cursor: pointer;
+}
+
+.container nav .navbar .right span a span {
+  opacity: 0.6;
+}
+
+.container .first-page {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .first-page .wrapper {
+  width: calc(100% - 300px);
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+  background-color: #141416;
+  border-right: 1px dashed #ffffff33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .first-page .wrapper img {
+  position: absolute;
+  width: 274.75px;
+  height: 450px;
+  z-index: -1px;
+}
+
+.container .first-page .wrapper p {
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}
+
+.container .first-page .wrapper p span {
+  color: #ffba08;
+}
+
+.container .first-page .black {
+  position: relative;
+  width: 300px;
+  height: 100vh;
+}
+
+.container .first-page .black .questions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.container .first-page .black .questions img {
+  position: absolute;
+  right: 34px;
+  top: 34px;
+}
+
+.container .first-page .black .questions p {
+  width: 180px;
+  height: 64px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+/*# sourceMappingURL=style.css.map */

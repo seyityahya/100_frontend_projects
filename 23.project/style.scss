@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  nav {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    padding: 0 0 0 30px;
+    height: 100px;
+    background-color: black;
+    justify-content: space-between;
+    border-bottom: 1px dashed #ffffff33;
+
+    .navbar {
+      display: flex;
+      gap: 30px;
+      .left {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        a {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 16px;
+          letter-spacing: 0em;
+          text-align: left;
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+      .right {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        span {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          a {
+            border-left: 1px dashed #ffffff33;
+            height: 100px;
+            width: 60px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 34px;
+            letter-spacing: 0em;
+            cursor: pointer;
+            span {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+  }
+  .first-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .wrapper {
+      width: calc(100% - 300px);
+      height: calc(100vh - 100px);
+      margin-top: 100px;
+      background-color: #141416;
+      border-right: 1px dashed #ffffff33;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        position: absolute;
+        width: 274.75px;
+        height: 450px;
+        z-index: -1px;
+      }
+      p {
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 64px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: white;
+        span {
+          color: #ffba08;
+        }
+      }
+    }
+    .black {
+      position: relative;
+      width: 300px;
+      height: 100vh;
+      .questions {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        img {
+          position: absolute;
+          right: 34px;
+          top: 34px;
+        }
+        p {
+          width: 180px;
+          height: 64px;
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 32px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
