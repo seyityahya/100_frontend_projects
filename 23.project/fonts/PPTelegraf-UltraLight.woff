@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('PPTelegraf-UltraLight.eot');
+    src: url('PPTelegraf-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('PPTelegraf-UltraLight.woff2') format('woff2'),
+        url('PPTelegraf-UltraLight.woff') format('woff'),
+        url('PPTelegraf-UltraLight.ttf') format('truetype'),
+        url('PPTelegraf-UltraLight.svg#PPTelegraf-UltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('PPTelegraf-UltraBold.eot');
+    src: url('PPTelegraf-UltraBold.eot?#iefix') format('embedded-opentype'),
+        url('PPTelegraf-UltraBold.woff2') format('woff2'),
+        url('PPTelegraf-UltraBold.woff') format('woff'),
+        url('PPTelegraf-UltraBold.ttf') format('truetype'),
+        url('PPTelegraf-UltraBold.svg#PPTelegraf-UltraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('PPTelegraf-Regular.eot');
+    src: url('PPTelegraf-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PPTelegraf-Regular.woff2') format('woff2'),
+        url('PPTelegraf-Regular.woff') format('woff'),
+        url('PPTelegraf-Regular.ttf') format('truetype'),
+        url('PPTelegraf-Regular.svg#PPTelegraf-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

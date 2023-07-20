@@ -148,6 +148,7 @@
         letter-spacing: 0em;
         text-align: center;
         color: white;
+        padding: 10px;
         word-wrap: break-word;
         word-break: break-all;
         span {
@@ -225,17 +226,468 @@
     }
   }
 }
+.questions:hover {
+  background-color: #ffba08;
+}
 
 //second page ----------
 
 .second-page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #141416;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  padding-top: 30px;
+  .background-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img {
+      width: 100%;
+    }
+    .overlay-image {
+      position: absolute;
+      left: 10%;
+      bottom: 20%;
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+  }
+  .second-page-left {
+    max-width: 623px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    h3 {
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 18px;
+      color: #ffba08;
+    }
+    p {
+      font-family: Panchang-medium;
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 54px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+      padding: 10px;
+    }
+  }
+
+  .second-page-right {
+    z-index: 1;
+    max-width: 628px;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    gap: 60px;
+    .left-top {
+      display: flex;
+      align-items: end;
+      p {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 34px;
+        color: #fff;
+        span {
+          font-weight: 400;
+          color: #ffffff33;
+        }
+      }
+    }
+    .right-bottom {
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: 400;
+      line-height: 34px;
+      padding: 10px;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 }
 
-.questions:hover {
+//second page finish -----------
+
+//our project -------------
+
+.our-project {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  h2 {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffba08;
+    padding: 60px 30px 60px 30px;
+  }
+  p {
+    max-width: 797px;
+    padding: 60px 40px 60px 40px;
+    color: #ffffff;
+    line-height: 34px;
+    font-size: 16px;
+    font-weight: 400;
+    span {
+      font-weight: 800;
+      color: #fff;
+    }
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+}
+
+//project page
+
+.project-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  h2 {
+    max-width: 533px;
+    padding: 40px 30px 40px 30px;
+    color: #fff;
+    font-family: Panchang-Medium;
+    font-size: 44px;
+    line-height: 54px;
+  }
+  .project-cards {
+    display: flex;
+    justify-content: space-between;
+    max-width: 877px;
+    background-color: #141416;
+    .card {
+      height: 310px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px 40px 60px 40px;
+      position: relative;
+      svg {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+      }
+      img {
+        width: 44px;
+      }
+      .trans-45 {
+        transform: rotate(45deg);
+      }
+      h4 {
+        font-family: "PP Telegraf";
+        font-weight: 400;
+        max-width: 212px;
+        color: white;
+        font-size: 24px;
+      }
+    }
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// our invertor relations
+
+.our-invertor {
+  width: 100%;
+  margin-top: 52px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    span {
+      padding: 18px 0 18px 0;
+      font-family: PP Telegraf;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ffba08;
+    }
+    h2 {
+      font-family: "Panchang-Medium";
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 54px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+  }
+
+  .page {
+    display: flex;
+    margin-left: 30px;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    .image {
+      max-width: 440px;
+      height: auto;
+      display: block;
+      @media (max-width: 768px) {
+        max-width: 220px;
+      }
+    }
+    .content {
+      display: flex;
+      gap: 30px;
+      max-width: 740px;
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .item {
+          display: flex;
+          gap: 30px;
+          align-items: start;
+          span {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h2 {
+              font-family: PP Telegraf;
+              font-size: 16px;
+              font-weight: 800;
+              line-height: 34px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: #fff;
+            }
+            p {
+              //styleName: ParagraphText;
+              font-family: PP Telegraf;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 34px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: #eff0f2;
+              max-height: 68px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+}
+
+//what have we done
+
+.what-have {
+  margin: 30px;
+  margin-bottom: 10px;
+  padding: 40px 30px 40px 30px;
+  background-color: #141416;
+  color: #eff0f2;
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+  .top {
+    display: flex;
+    gap: 30px;
+    h2 {
+      font-family: Panchang-Regular;
+      font-size: 44px;
+      line-height: 54px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .card {
+      max-width: 420px;
+      max-height: 517px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+      img {
+        max-width: 420px;
+        height: auto;
+        @media (max-width: 768px) {
+          max-width: 220px;
+        }
+      }
+      .date {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        background-color: #ffffff1a;
+        padding: 8px 10px 5px 10px;
+        font-family: PP Telegraf;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .card-desc {
+        max-width: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4 {
+          height: 57px;
+          font-family: PP Telegraf;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #ffffff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        p {
+          height: 68px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 34px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #eff0f2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .read-more {
+        width: 118px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid grey;
+        button {
+          font-family: PP Telegraf;
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 16px;
+          letter-spacing: 0em;
+          text-align: left;
+          background-color: transparent;
+          color: #fff;
+        }
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    :hover {
+      .read-more {
+        border-bottom: 1px solid #ffba08;
+      }
+    }
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+  }
+}
+
+//contact us
+
+.contact-us {
+  margin: 30px;
+  margin-top: 0;
+  padding: 40px 30px 40px 30px;
   background-color: #ffba08;
+  background-image: url(../image/Vector.png);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  h2 {
+    font-family: "Panchang-Medium";
+    font-size: 44px;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  p {
+    font-family: PP Telegraf;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+  }
+  .contact-button {
+    display: flex;
+    align-items: center;
+    button {
+      background-color: transparent;
+      font-family: PP Telegraf;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+      margin-right: 16px;
+    }
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .menu-navbar {
