@@ -110,6 +110,13 @@
 }
 
 .container nav .navbar .left a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   color: #ffffff;
   font-size: 16px;
   font-weight: 800;
@@ -118,6 +125,14 @@
   text-align: left;
   opacity: 0.6;
   cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.container nav .navbar .left :hover {
+  border-bottom: 1px solid #ffba08;
+  color: #ffba08;
+  opacity: 1;
 }
 
 .container nav .navbar .right {
@@ -428,26 +443,26 @@
 }
 
 .second-page .second-page-right .left-top p {
+  font-family: PP-Telegraf-bold;
   font-size: 16px;
-  font-weight: 800;
   line-height: 34px;
   color: #fff;
 }
 
 .second-page .second-page-right .left-top p span {
-  font-weight: 400;
   color: #ffffff33;
 }
 
 .second-page .second-page-right .right-bottom {
+  font-family: PP-Telegraf-normal;
   font-size: 16px;
   color: #ffffff;
-  font-weight: 400;
   line-height: 34px;
   padding: 10px;
 }
 
 .second-page .second-page-right .right-bottom span {
+  font-family: PP-Telegraf-bold;
   color: #fff;
 }
 
@@ -482,16 +497,17 @@
 }
 
 .our-project p {
+  font-family: PP-Telegraf-normal;
   max-width: 797px;
   padding: 60px 40px 60px 40px;
-  color: #ffffff;
+  color: #eff0f2;
   line-height: 34px;
   font-size: 16px;
   font-weight: 400;
 }
 
 .our-project p span {
-  font-weight: 800;
+  font-family: PP-Telegraf-bold;
   color: #fff;
 }
 
@@ -501,6 +517,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (min-width: 1687px) {
+  .our-project {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -535,7 +559,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 877px;
-  background-color: #141416;
 }
 
 .project-page .project-cards .card {
@@ -555,6 +578,9 @@
           justify-content: space-between;
   padding: 60px 40px 60px 40px;
   position: relative;
+  background-color: #141416;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .project-page .project-cards .card svg {
@@ -564,20 +590,44 @@
 }
 
 .project-page .project-cards .card img {
-  width: 44px;
+  width: 54px;
 }
 
 .project-page .project-cards .card .trans-45 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.project-page .project-cards .card .hover-image {
+  display: none;
+  width: 54px;
 }
 
 .project-page .project-cards .card h4 {
-  font-family: "PP Telegraf";
-  font-weight: 400;
+  font-family: "PP-Telegraf-normal";
   max-width: 212px;
   color: white;
   font-size: 24px;
+}
+
+.project-page .project-cards :hover {
+  background-color: #ffba08;
+}
+
+.project-page .project-cards :hover svg path {
+  stroke: #000;
+}
+
+.project-page .project-cards :hover h4 {
+  color: #000;
+}
+
+.project-page .project-cards :hover img {
+  display: none;
+}
+
+.project-page .project-cards :hover .hover-image {
+  display: block;
 }
 
 @media (max-width: 1100px) {
@@ -598,6 +648,14 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (min-width: 1687px) {
+  .project-page {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -627,9 +685,8 @@
 
 .our-invertor .title span {
   padding: 18px 0 18px 0;
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-bold;
   font-size: 12px;
-  font-weight: 800;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
@@ -724,9 +781,8 @@
 }
 
 .our-invertor .page .content .card .item span h2 {
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-bold;
   font-size: 16px;
-  font-weight: 800;
   line-height: 34px;
   letter-spacing: 0em;
   text-align: left;
@@ -734,9 +790,8 @@
 }
 
 .our-invertor .page .content .card .item span p {
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 34px;
   letter-spacing: 0em;
   text-align: left;
@@ -851,9 +906,8 @@
   left: 0;
   background-color: #ffffff1a;
   padding: 8px 10px 5px 10px;
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-bold;
   font-size: 12px;
-  font-weight: 800;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
@@ -875,9 +929,9 @@
 
 .what-have .bottom .card .card-desc h4 {
   height: 57px;
-  font-family: PP Telegraf;
-  font-size: 24px;
+  font-family: PP-Telegraf-normal;
   font-weight: 400;
+  font-size: 24px;
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
@@ -912,9 +966,8 @@
 }
 
 .what-have .bottom .card .read-more button {
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-bold;
   font-size: 16px;
-  font-weight: 800;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
@@ -968,9 +1021,8 @@
 }
 
 .contact-us p {
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-normal;
   font-size: 16px;
-  font-weight: 400;
   line-height: 34px;
   letter-spacing: 0em;
   text-align: left;
@@ -988,9 +1040,8 @@
 
 .contact-us .contact-button button {
   background-color: transparent;
-  font-family: PP Telegraf;
+  font-family: PP-Telegraf-bold;
   font-size: 16px;
-  font-weight: 800;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
@@ -1003,12 +1054,183 @@
   height: 16px;
 }
 
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 82px 30px 30px 30px;
+  gap: 30px;
+}
+
+.footer .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.footer .top img {
+  width: 84px;
+  height: auto;
+}
+
+.footer .top .top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.footer .top .top-right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  color: #fff;
+  font-family: PP-Telegraf-normal;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-right: 1px dashed #ffffff33;
+}
+
+.footer .top .top-right :last-child {
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .footer .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer .middle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  padding-right: 100px;
+}
+
+.footer .middle .group {
+  max-width: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.footer .middle .group span {
+  font-family: PP-Telegraf-bold;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6d7279;
+}
+
+.footer .middle .group p {
+  max-width: 263px;
+  font-family: PP-Telegraf-normal;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+
+.footer .middle .group a {
+  max-width: 263px;
+  font-family: PP-Telegraf-normal;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+
+.footer .middle .group a p {
+  width: auto;
+}
+
+.footer .middle .group a :hover {
+  border-bottom: 1px solid #ffba08;
+  color: #ffba08;
+}
+
+@media (max-width: 768px) {
+  .footer .middle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+}
+
+.footer .bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.footer .bottom p {
+  font-family: PP-Telegraf-normal;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+
 .menu-navbar {
   display: none;
   position: fixed;
   z-index: 3;
   width: 243px;
   height: 100vh;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .menu-navbar button {

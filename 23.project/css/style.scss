@@ -71,6 +71,9 @@
         align-items: center;
         gap: 24px;
         a {
+          display: flex;
+          align-items: center;
+          height: 100%;
           color: #ffffff;
           font-size: 16px;
           font-weight: 800;
@@ -79,6 +82,12 @@
           text-align: left;
           opacity: 0.6;
           cursor: pointer;
+          transition: color 0.3s ease;
+        }
+        :hover {
+          border-bottom: 1px solid #ffba08;
+          color: #ffba08;
+          opacity: 1;
         }
       }
       .right {
@@ -294,23 +303,23 @@
       display: flex;
       align-items: end;
       p {
+        font-family: PP-Telegraf-bold;
         font-size: 16px;
-        font-weight: 800;
         line-height: 34px;
         color: #fff;
         span {
-          font-weight: 400;
           color: #ffffff33;
         }
       }
     }
     .right-bottom {
+      font-family: PP-Telegraf-normal;
       font-size: 16px;
       color: #ffffff;
-      font-weight: 400;
       line-height: 34px;
       padding: 10px;
       span {
+        font-family: PP-Telegraf-bold;
         color: #fff;
       }
     }
@@ -339,19 +348,24 @@
     padding: 60px 30px 60px 30px;
   }
   p {
+    font-family: PP-Telegraf-normal;
     max-width: 797px;
     padding: 60px 40px 60px 40px;
-    color: #ffffff;
+    color: #eff0f2;
     line-height: 34px;
     font-size: 16px;
     font-weight: 400;
     span {
-      font-weight: 800;
+      font-family: PP-Telegraf-bold;
       color: #fff;
     }
   }
   @media (max-width: 1100px) {
     flex-direction: column;
+  }
+
+  @media (min-width: 1687px) {
+    justify-content: center;
   }
 }
 
@@ -375,7 +389,6 @@
     display: flex;
     justify-content: space-between;
     max-width: 877px;
-    background-color: #141416;
     .card {
       height: 310px;
       display: flex;
@@ -384,23 +397,46 @@
       justify-content: space-between;
       padding: 60px 40px 60px 40px;
       position: relative;
+      background-color: #141416;
+      transition: background-color 0.3s ease;
       svg {
         position: absolute;
         right: 18px;
         top: 18px;
       }
       img {
-        width: 44px;
+        width: 54px;
       }
       .trans-45 {
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
+      }
+
+      .hover-image {
+        display: none;
+        width: 54px;
       }
       h4 {
-        font-family: "PP Telegraf";
-        font-weight: 400;
+        font-family: "PP-Telegraf-normal";
         max-width: 212px;
         color: white;
         font-size: 24px;
+      }
+    }
+    :hover {
+      background-color: #ffba08;
+      svg {
+        path {
+          stroke: #000;
+        }
+      }
+      h4 {
+        color: #000;
+      }
+      img {
+        display: none;
+      }
+      .hover-image {
+        display: block;
       }
     }
     @media (max-width: 1100px) {
@@ -410,6 +446,9 @@
   @media (max-width: 1100px) {
     flex-direction: column;
     align-items: center;
+  }
+  @media (min-width: 1687px) {
+    justify-content: center;
   }
 }
 
@@ -428,9 +467,8 @@
     gap: 30px;
     span {
       padding: 18px 0 18px 0;
-      font-family: PP Telegraf;
+      font-family: PP-Telegraf-bold;
       font-size: 12px;
-      font-weight: 800;
       line-height: 16px;
       letter-spacing: 0em;
       text-align: left;
@@ -482,19 +520,16 @@
             flex-direction: column;
             justify-content: space-between;
             h2 {
-              font-family: PP Telegraf;
+              font-family: PP-Telegraf-bold;
               font-size: 16px;
-              font-weight: 800;
               line-height: 34px;
               letter-spacing: 0em;
               text-align: left;
               color: #fff;
             }
             p {
-              //styleName: ParagraphText;
-              font-family: PP Telegraf;
+              font-family: PP-Telegraf-normal;
               font-size: 16px;
-              font-weight: 400;
               line-height: 34px;
               letter-spacing: 0em;
               text-align: left;
@@ -569,9 +604,8 @@
         left: 0;
         background-color: #ffffff1a;
         padding: 8px 10px 5px 10px;
-        font-family: PP Telegraf;
+        font-family: PP-Telegraf-bold;
         font-size: 12px;
-        font-weight: 800;
         line-height: 16px;
         letter-spacing: 0em;
         text-align: left;
@@ -583,9 +617,9 @@
         justify-content: space-between;
         h4 {
           height: 57px;
-          font-family: PP Telegraf;
-          font-size: 24px;
+          font-family: PP-Telegraf-normal;
           font-weight: 400;
+          font-size: 24px;
           line-height: 28px;
           letter-spacing: 0em;
           text-align: left;
@@ -613,9 +647,8 @@
         padding-bottom: 16px;
         border-bottom: 1px solid grey;
         button {
-          font-family: PP Telegraf;
+          font-family: PP-Telegraf-bold;
           font-size: 16px;
-          font-weight: 800;
           line-height: 16px;
           letter-spacing: 0em;
           text-align: left;
@@ -661,9 +694,8 @@
     word-break: break-all;
   }
   p {
-    font-family: PP Telegraf;
+    font-family: PP-Telegraf-normal;
     font-size: 16px;
-    font-weight: 400;
     line-height: 34px;
     letter-spacing: 0em;
     text-align: left;
@@ -674,9 +706,8 @@
     align-items: center;
     button {
       background-color: transparent;
-      font-family: PP Telegraf;
+      font-family: PP-Telegraf-bold;
       font-size: 16px;
-      font-weight: 800;
       line-height: 16px;
       letter-spacing: 0em;
       text-align: left;
@@ -690,12 +721,124 @@
   }
 }
 
+// Footer
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 82px 30px 30px 30px;
+  gap: 30px;
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    img {
+      width: 84px;
+      height: auto;
+    }
+    .top-right {
+      display: flex;
+      gap: 10px;
+      padding: 0 10px 0 10px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        color: #fff;
+        font-family: PP-Telegraf-normal;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        border-right: 1px dashed #ffffff33;
+      }
+      :last-child {
+        border: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  .middle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-right: 100px;
+    .group {
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      span {
+        font-family: PP-Telegraf-bold;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #6d7279;
+      }
+      p {
+        max-width: 263px;
+        font-family: PP-Telegraf-normal;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+      }
+      a {
+        max-width: 263px;
+        font-family: PP-Telegraf-normal;
+        font-size: 16px;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+        p {
+          width: auto;
+        }
+        :hover {
+          border-bottom: 1px solid #ffba08;
+          color: #ffba08;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    p {
+      font-family: PP-Telegraf-normal;
+      font-size: 16px;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+  }
+}
+
 .menu-navbar {
   display: none;
   position: fixed;
   z-index: 3;
   width: 243px;
   height: 100vh;
+  transition: width 0.3s ease;
   button {
     height: 100px;
     right: 253px;

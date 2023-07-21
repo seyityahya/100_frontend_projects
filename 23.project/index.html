@@ -13,20 +13,20 @@
     <div class="all">
       <div class="container">
         <nav>
-          <a href="/">
-            <img alt="drawing" src="image/Group.svg" />
+          <a href="#">
+            <img id="logo" alt="drawing" src="image/Group.svg" />
           </a>
-          <div class="menu-toggle">
+          <div id="menu-toggle" class="menu-toggle">
             <img src="image/hamburger.svg" alt="" />
           </div>
           <div class="navbar">
             <div class="left">
-              <a>Who Are We</a>
-              <a>Our Project</a>
-              <a>Our Investor Relations</a>
-              <a>News</a>
-              <a>Career</a>
-              <a>Content</a>
+              <a href="#who-are-we">Who Are We</a>
+              <a href="#our-project">Our Project</a>
+              <a href="#our-investor">Our Investor Relations</a>
+              <a href="#news">News</a>
+              <a href="#career">Career</a>
+              <a href="#content">Content</a>
             </div>
             <div class="right">
               <span>
@@ -60,9 +60,9 @@
           <img alt="" src="image/Arrow.svg" />
         </div>
       </div>
-      <div class="menu-navbar">
-        <button><img alt="" src="image/close.svg" /></button>
-        <a href="/" class="image">
+      <div id="menu-navbar" class="menu-navbar">
+        <button><img id="close-button" alt="" src="image/close.svg" /></button>
+        <a href="#" class="image">
           <img alt="drawing" src="image/Group.svg" />
         </a>
         <div class="navbar-link">
@@ -84,7 +84,7 @@
 
       <!-- second page -->
 
-      <div class="second-page">
+      <div id="who-are-we" class="second-page">
         <div class="background-container">
           <img src="image/Background.png" alt="" />
           <div class="overlay-image">
@@ -113,7 +113,7 @@
       </div>
 
       <!-- our project -->
-      <div class="our-project">
+      <div id="our-project" class="our-project">
         <h2>OUR PROJECTS</h2>
         <p>
           Mollis <span>massa</span> in sit cursus a sed. Eu eget viverra ut quis
@@ -143,7 +143,12 @@
                 stroke-width="2"
               />
             </svg>
-            <img class="trans-45" src="image/project2-icon.svg" alt="" />
+            <img src="image/project-icon.svg" alt="" />
+            <img
+              class="hover-image"
+              src="image/project-hover-icon.svg"
+              alt=""
+            />
             <h4>Project name is here</h4>
           </div>
           <div class="card">
@@ -160,7 +165,12 @@
                 stroke-width="2"
               />
             </svg>
-            <img src="image/project2-icon.svg" alt="" />
+            <img class="trans-45" src="image/project-icon.svg" alt="" />
+            <img
+              class="hover-image trans-45"
+              src="image/project-hover-icon.svg"
+              alt=""
+            />
             <h4>Project name is here</h4>
           </div>
           <div class="card">
@@ -177,16 +187,21 @@
                 stroke-width="2"
               />
             </svg>
-            <img class="trans-45" src="image/project2-icon.svg" alt="" />
+            <img src="image/project-icon.svg" alt="" />
+            <img
+              class="hover-image"
+              src="image/project-hover-icon.svg"
+              alt=""
+            />
             <h4>Project name is here</h4>
           </div>
         </div>
       </div>
 
       <!-- our invertor relations -->
-      <div class="our-invertor">
+      <div id="our-investor" class="our-invertor">
         <div class="title">
-          <span> OUR INVERTOR RELATIONS </span>
+          <span> OUR INVESTOR RELATIONS </span>
           <h2>Our investor relations</h2>
         </div>
         <div class="page">
@@ -338,6 +353,8 @@
         </div>
       </div>
 
+      <!-- contact us -->
+
       <div class="contact-us">
         <h2>Still have questions?</h2>
         <p>
@@ -350,6 +367,50 @@
           <img src="image/white-arrow.svg" alt="" />
         </div>
       </div>
+
+      <!-- Footer -->
+
+      <div class="footer">
+        <div class="top">
+          <img src="image/footer-logo.png" alt="" />
+          <div class="top-right">
+            <a href="">Fb</a>
+            <a href="">Ig</a>
+            <a href="">Tw</a>
+            <a href="">In</a>
+            <a href="">Yt</a>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="group hover">
+            <span>Navigation</span>
+            <a><p>Who Are We</p></a>
+            <a><p>Our Project</p></a>
+            <a><p>News</p></a>
+            <a><p>Contact</p></a>
+          </div>
+          <div class="group hover">
+            <span>Our Project</span>
+            <a><p>Project Name</p></a>
+            <a><p>Project Name</p></a>
+            <a><p>Project Name</p></a>
+          </div>
+          <div class="group">
+            <span>Contact</span>
+            <p>+90 216 706 60 64</p>
+            <p>hello@kumsalajans.com</p>
+            <p>
+              Cevizli Mah. Talatpaşa Cad. No:2 Aka Plaza 4.Kat / Maltepe /
+              İstanbul
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>All rights reserved. © 2022</p>
+          <img src="image/KumsalLogo.png" alt="" />
+        </div>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
