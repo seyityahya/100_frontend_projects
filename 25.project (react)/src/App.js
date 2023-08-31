@@ -20,15 +20,16 @@ function App() {
         </>
       ),
     },
-    { field: "country" },
-    { field: "year" },
-    { field: "date" },
-    { field: "sport" },
-    { field: "gold" },
-    { field: "silver" },
-    { field: "bronze" },
-    { field: "total" },
-  ]);
+    { field: "country", editable: false },
+    { field: "year", editable: true },
+    { field: "date", editable: true },
+    { field: "sport", editable: true },
+    { field: "gold", editable: true },
+    { field: "silver", editable: true },
+    { field: "bronze", editable: true },
+    { field: "total", editable: true },
+  ],
+  );
 
   const defaultColDef = useMemo(
     () => ({
@@ -37,13 +38,27 @@ function App() {
       enableRowGroup: true,
     }),
     []
-  );
+  ); 
 
   useEffect(() => {
     fetch("https://www.ag-grid.com/example-assets/olympic-winners.json")
       .then((result) => result.json())
       .then((rowData) => setRowData(rowData));
   }, []);
+
+  const handleCellValueChanged = (params) => {
+    console.log("Değer değiştirildi: Eski Değer", params.oldValue, "Yeni Değer:", params.newValue);
+    console.log("Güncellenen Satir Verisi:", params.node.data);
+    // Burada veriyi güncelleme işlemini gerçekleştirebilirsiniz
+  };
+
+  const gridOptions = {
+    columnDefs,
+    onCellValueChanged: handleCellValueChanged,
+    // ... diğer grid seçenekleri ...
+  };
+
+  
 
   return (
     <div className="ag-theme-alpine-dark" style={{ height: "100vh" }}>
@@ -52,6 +67,7 @@ function App() {
         rowData={rowData}
         animateRows={true}
         columnDefs={columnDefs}
+        gridOptions={gridOptions}
         defaultColDef={defaultColDef}
       />
     </div>
